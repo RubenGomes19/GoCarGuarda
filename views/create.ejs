@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CREATE</title>
+
+  <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="~/css/style.css">
+</head>
+<body style="background-color: gainsboro;">
+
+<div style=" background-color: white; width: 50%; margin-left: 25%; padding-left: 60px;padding-bottom: 10px;">
+    
+        <h2 style="margin-left: 190px;"> Lista Clientes</h2>
+        <table style="background-color: white;"  border="1">
+            <thead>
+                <tr style="font-size: 20px;">
+                    <td><b>Nome</b></td>
+                    <td><b>Marca</b></td>
+                    <td><b>Matricula</b></td>
+                </tr>
+            </thead>
+            <tbody style="font-size: 20px;">
+                    <% clientes.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.Nome %></td>
+                    <td><%= details.MarcaCarro %></td>
+                    <td><%= details.Matricula %></td>
+                    <td> 
+                        <a href="/edit/<%= details._id %>"><button class="btn btn-warning">Editar</button></a>   
+                    </td>
+                    <td>
+                        <a href="/delete/<%= details._id %>"><button class="btn btn-danger">Eliminar</button></a>
+                    </td>
+                    
+                </tr>
+                <% }) %>
+            </tbody>
+            <a href="/layout"><button class="btn btn-success">Novo Cliente</button></a>  
+            <p></p>
+        </table>
+    </div>
+</body>
+</html>

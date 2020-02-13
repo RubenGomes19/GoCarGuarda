@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+          crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Registar Utilizador</title>
+</head>
+<body style="background-color: gainsboro;">
+  <div style=" background-color: white; width: 40%; margin-left: 27%; padding-left: 20px;padding-bottom: 10px; padding-right: 20px;">
+    <form class="form-signin" action="/register" method="POST">
+      <h2 style="text-align: center;">Registar utilizador</h2>
+      <p></p>
+      <h5>Nome utilizador</h5>
+      <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required>
+      <p></p>
+
+      <h5>Password</h5>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+      <p></p>
+
+      <a href="/"><button class="btn btn-lg btn-success btn-block">Registar</button></a>
+    </form>
+    
+  </div>
+   
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Cliente</title>
+
+  <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+          crossorigin="anonymous">
+
+</head>
+<body style="background-color: gainsboro;">
+
+<div style=" background-color: white; width: 23%; margin-left: 35%; padding-left: 10px;padding-bottom: 10px;">
+  <h2 style="text-align: center;">Editar Ficha Cliente</h2>
+
+  <% clientes.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+      <h4><b>Nome Cliente</b></h4>
+      <input type="text" value="<%= details.Nome %>" name="nome">
+      <p></p>
+
+      <h4><b>Marca Carro</b></h4>
+      <input type="text" value="<%= details.MarcaCarro %>" name="marca">
+      <p></p>
+
+      <h4><b>Matricula</b></h4>
+      <input type="text" value="<%= details.Matricula %>" name="matricula">
+      <p></p>
+
+      <button class="btn btn-success" type="submit">Editar</button>
+      <button class="btn btn-danger">
+        <a style=" color: white;" href="/create">Cancelar</a>
+      </button>
+
+    </form>
+  <% }) %>
+
+  
+</div>
+</body>
+</html>
