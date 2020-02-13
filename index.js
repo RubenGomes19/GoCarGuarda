@@ -3,8 +3,12 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
+//const MongoClient = require('mongodb').MongoClient;
+//const uri = "mongodb+srv://robot:eparao20@crud-nodejs-lv9tf.azure.mongodb.net/test?retryWrites=true&w=majority";
+
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://robot:eparao20@crud-nodejs-lv9tf.azure.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb://1700631:Y71lw8JmlaiBeW5AX9DYk7yeYyc5Lig1bdO3ggXhayyHVEz1D6alfl6HhLsVAxJRqoJx3vvCCHnNdf3yV3tMyQ==@1700631.documents.azure.com:10255/?ssl=true&replicaSet=globaldb";
+
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
